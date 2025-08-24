@@ -1,0 +1,13 @@
+config {
+  type: "view"
+  }
+
+
+SELECT
+  order_id,
+  order_customer_id,
+  order_status
+FROM
+  `pp-bigquery-02`.demo_retail.orders
+WHERE
+  order_status IN ('COMPLETE', 'CLOSED')
